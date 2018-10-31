@@ -1,5 +1,4 @@
-# Python program to illustrate a stop watch 
-# using Tkinter 
+# Stop watch using Tkinter 
 #importing the required libraries 
 import tkinter as Tkinter 
 import sqlite3
@@ -70,7 +69,7 @@ def Reset(label):
     c.execute("SELECT * FROM TIME")
     data = c.fetchall()
     ro = len(data)
-    print(data)
+    #print(data)
     for row1 in range(ro):
         for col in range(2):
             txt = str(" " + str(data[row1][col]) + " "*(9-len(str(data[row1][col]))))
